@@ -27,8 +27,15 @@ class BmiRatingPage extends StatelessWidget {
                     )
                   },
               child: SizedBox(
-                height: 50,
-                child: Center(child: Text(BMI.bmiRatings[index].name)),
+                height: 35,
+                width: double.infinity,
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 10),
+                  child: Text(
+                    BMI.bmiRatings[index].name,
+                    textAlign: TextAlign.center,
+                  ),
+                ),
               ));
         },
         separatorBuilder: (BuildContext context, int index) => const Divider(),

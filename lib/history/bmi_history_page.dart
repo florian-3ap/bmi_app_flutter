@@ -1,6 +1,7 @@
 import 'package:bmi_app_flutter/database/sql_helper.dart';
 import 'package:bmi_app_flutter/layout/custom_drawer.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class BmiHistoryPage extends StatefulWidget {
   const BmiHistoryPage({Key? key}) : super(key: key);
@@ -51,7 +52,9 @@ class _BmiHistoryPageState extends State<BmiHistoryPage> {
                 return SizedBox(
                   height: 70,
                   child: ListTile(
-                    title: Text("Date: " + _bmi[index]['createdAt'].toString()),
+                    title: Text("Date: " +
+                        DateFormat('dd.MM.yyyy - kk:mm')
+                            .format(DateTime.parse(_bmi[index]['createdAt']))),
                     isThreeLine: true,
                     subtitle: Text("Height: " +
                         _bmi[index]['height'].toString() +

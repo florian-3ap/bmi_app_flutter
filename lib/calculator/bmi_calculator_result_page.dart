@@ -27,7 +27,11 @@ class _BmiCalculatorResultPageState extends State<BmiCalculatorResultPage> {
     await SQLHelper.createItem(widget.height, widget.weight);
 
     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-      content: Text('BMI Data saved.'),
+      backgroundColor: Colors.lightGreen,
+      content: Text(
+        'BMI Data saved.',
+        textAlign: TextAlign.center,
+      ),
     ));
   }
 

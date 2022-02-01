@@ -51,7 +51,7 @@ class CustomDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: const Icon(Icons.calculate),
+            leading: const Icon(Icons.format_list_numbered_rtl),
             title: const Text('BMI Rating'),
             onTap: () => {
               Navigator.push(
@@ -61,7 +61,7 @@ class CustomDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: const Icon(Icons.calculate),
+            leading: const Icon(Icons.history),
             title: const Text('BMI History'),
             onTap: () => {
               Navigator.push(
