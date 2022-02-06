@@ -41,7 +41,8 @@ class _BmiCalculatorPageState extends State<BmiCalculatorPage> {
                   controller: heightController,
                   keyboardType: TextInputType.number,
                   inputFormatters: <TextInputFormatter>[
-                    FilteringTextInputFormatter.digitsOnly
+                    LengthLimitingTextInputFormatter(3),
+                    FilteringTextInputFormatter.digitsOnly,
                   ],
                   decoration: const InputDecoration(
                     border: OutlineInputBorder(),
@@ -62,6 +63,7 @@ class _BmiCalculatorPageState extends State<BmiCalculatorPage> {
                   controller: weightController,
                   keyboardType: TextInputType.number,
                   inputFormatters: <TextInputFormatter>[
+                    LengthLimitingTextInputFormatter(3),
                     FilteringTextInputFormatter.digitsOnly
                   ],
                   decoration: const InputDecoration(
